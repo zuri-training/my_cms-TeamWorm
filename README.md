@@ -44,12 +44,7 @@
 <a href="https://www.python.org/" target="_blank" rel="noreferrer"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png" width="36" height="36" alt="Python" /></a>
 <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/django-colored.svg" width="36" height="36" alt="Django" /></a>
 
-### Integrated Development Environment used
-<a href="https://code.visualstudio.com/brand" target="_blank"><img scr="https://user-images.githubusercontent.com/49784088/205490253-1e212e08-6968-43f0-a66c-3e01dd9cc17e.svg" width="36" height="36" alt="VSCode"></a>
-
-
 ## Badges
-
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/zuri-training/my_cms/blob/main/LICENSE)
 
