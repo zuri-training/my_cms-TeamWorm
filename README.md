@@ -45,7 +45,7 @@
 <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/django-colored.svg" width="36" height="36" alt="Django" /></a>
 
 ### Integrated Development Environment used
-![vscode](https://user-images.githubusercontent.com/49784088/205490253-1e212e08-6968-43f0-a66c-3e01dd9cc17e.svg)
+<a href="https://code.visualstudio.com/brand" target="_blank"><img scr="https://user-images.githubusercontent.com/49784088/205490253-1e212e08-6968-43f0-a66c-3e01dd9cc17e.svg" width="36" height="36" alt="VSCode"></a>
 
 
 ## Badges
