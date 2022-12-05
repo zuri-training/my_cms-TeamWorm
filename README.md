@@ -46,6 +46,7 @@
 - [Princess Audu](https://www.github.com/Piccolapessa) 
 - [Ishaka Abdulazeez](https://www.github.com/Azforeal)
 - [Edem Offiong](https://www.github.com/Offizil)
+- [Toluwalope Otegbeye](https://www.github.com/T-tegzy)
 
 ### Frontend developers (HTML, CSS, JS)
 - [Emmanuel Ajibulu](https://www.github.com/Emmanuel-ol)
