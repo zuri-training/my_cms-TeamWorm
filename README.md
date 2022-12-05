@@ -9,7 +9,6 @@
 
 [my_cms Documentation](https://docs.google.com/document/d/1nU1O4GucRPm8zLayJCinmSfG5HgUaRoB1G2RENE5aLk/edit?usp=sharing)
 
-[Design Sketch](https://www.figma.com/file/Jt5ssjcPF6oqAdFlPDzDKE/My_Cms-Design-Sketch?t=7xx9N5quYKANmSrM-%20%C2%A0%20%C2%A0%20%C2%A0%20%C2%A0%20%C2%A0)
 
 ## Features
 
