@@ -1,1 +1,0 @@
-website images will be in this folder
