@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'iCreate/styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'iCreate/styles/form.css' %}">
+    <script defer src="{% static 'iCreate/scripts/script.js' %}"></script>
+    <script defer src="{% static 'iCreate/scripts/form.js' %}"></script>
+    <title>Login</title>
+</head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="{% url 'iCreate:index' %}" title="home"
+          ><img src="{% static 'iCreate/images/icreate-logo.png' %}" alt=""
+        /></a>
+      </nav>
+    </header>
+
+    <h1>Welcome back</h1>
+    <div class="form-frame">
+      <form action="#">
+        <ul>
+          <li>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required />
+          </li>
+          <li>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="pasword"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}"
+              title="Password must contain at least one number, one upper case and lower case letter, and have a length of 8 to 12"
+              autocomplete="off"
+              required />
+            <ul>
+              <li class="below-password">
+                <input type="checkbox" id="remember" name="remember" />
+                <label for="remember">keep me logged in</label>
+              </li>
+              <li class="below-password"><a href="#">Forgot password?</a></li>
+            </ul>
+          </li>
+          <li>
+            <button type="submit">Login</button>
+          </li>
+        </ul>
+      </form>
+      <div>
+        <p>Don't have an account? <a href="{% url 'iCreate:register' %}">Signup</a></p>
+        <p>Or continue with</p>
+        <a href="https://www.google.com" class="google-btn">
+          <button type="button">
+            <img src="{% static 'iCreate/images/google-logo.jpg' %}" alt="google logo" />
+            <p>Sign up with google</p>
+          </button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
