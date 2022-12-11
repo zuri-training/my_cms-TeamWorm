@@ -23,7 +23,8 @@
 
   <h1>Sign up</h1>
   <div class="form-frame">
-    <form action="#">
+    <form action="#" method="post">
+      {% csrf_token %}
       <ul>
         <li>
           <label for="firstname">First name</label>
