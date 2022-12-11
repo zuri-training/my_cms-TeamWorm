@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'iCreate/styles/style.css' %}">
+  <link rel="stylesheet" href="{% static 'iCreate/styles/form.css' %}">
+  <script defer src="{% static 'iCreate/scripts/script.js' %}"></script>
+  <script defer src="{% static 'iCreate/scripts/form.js' %}"></script>
+  <title>Register</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="{% url 'iCreate:index' %}" title="home"><img src="{% static 'iCreate/images/icreate-logo.png' %}" alt="icreate logo" /></a>
+    </nav>
+  </header>
+
+  <h1>Sign up</h1>
+  <div class="form-frame">
+    <form action="#" method="post">
+      {% csrf_token %}
+      <ul>
+        <li>
+          <label for="firstname">First name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required />
+        </li>
+        <li>
+          <label for="lastname">Last name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" />
+        </li>
+        <li>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </li>
+        <li>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter a unique password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}"
+            title="Password must contain at least one number, one upper case and lower case letter, and have a length of 8 to 12"
+            autocomplete="off" required />
+        </li>
+        <li>
+          <label for="confirm">Confirm password</label>
+          <input type="password" id="confirm" name="confirm" placeholder="Confirm your unique password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}"
+            title="Password must contain at least one number, one upper case and lower case letter, and have a length of 8 to 12"
+            autocomplete="off" required />
+        </li>
+        <li>
+          <button type="submit">Sign up</button>
+        </li>
+      </ul>
+    </form>
+    <div>
+      <p>Already have an account? <a href="{% url 'iCreate:login' %}">Login</a></p>
+      <p>Or continue with</p>
+      <a href="https://www.google.com" class="google-btn">
+        <button type="button">
+          <img src="{% static 'iCreate/images/google-logo.jpg' %}" alt="google logo" />
+          <p>Sign up with google</p>
+        </button>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

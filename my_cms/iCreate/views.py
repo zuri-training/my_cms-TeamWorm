@@ -4,8 +4,12 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'iCreate/index.html', {
-        # to-be-edited: key-value pairs; django site variables,
-    })
+    return render(request, 'iCreate/index.html')
 
 
+def login(request):
+    return render(request, 'iCreate/login.html')
+
+
+def register(request):
+    return render(request, 'iCreate/register.html')
