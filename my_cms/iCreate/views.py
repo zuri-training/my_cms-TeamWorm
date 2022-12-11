@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'iCreate/index.html', {
+    return render(request, 'index.html', {
         # to-be-edited: key-value pairs; django site variables,
     })
 
