@@ -13,3 +13,6 @@ def login(request):
 
 def register(request):
     return render(request, 'iCreate/register.html')
+
+def recover_pw(request):
+    return render(request, 'iCreate/pw-recovery.html')
