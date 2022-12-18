@@ -1,5 +1,17 @@
-h1 {
-    font-size: 48px;
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-size: 3em;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2.6em;
 }
 
 .form-frame {

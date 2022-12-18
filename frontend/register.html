@@ -15,8 +15,27 @@
 <body>
   <header>
     <nav>
-      <a href="index.html" title="home"><img src="images/icreate-logo.png" alt="" /></a>
-    </nav>
+      <div class="nav">
+          <a href="index.html" title="home"><img src="images/icreate-logo.png" alt="logo"></a>
+          <ul id="mid" >
+              <li class="x-hidden"><a href="">Home</a></li>
+              <li class="x-hidden"><a href=""> About us</a></li>
+              <li class="x-hidden"><a href="">Contact us</a></li>
+          </ul>
+          <ul>
+              <li class="x-hidden"><a href="login.html" title="login">Login</a></li>
+              <li class="x-hidden"><a href="register.html" title="sign up">Sign up</a></li>
+              <li class="y-hidden"><img id="nav-btn" src="images/menu.png" alt="show menu"></li>
+          </ul>
+      </div>
+      <ul class="menu-block">
+          <li><a href="">Home</a></li>
+          <li><a href=""> About us</a></li>
+          <li><a href="">Contact us</a></li>
+          <li><a href="login.html" title="login">Login</a></li>
+          <li><a href="register.html" title="sign up">Sign up</a></li>
+      </ul>
+  </nav>
   </header>
 
   <h1>Sign up</h1>
@@ -57,7 +76,7 @@
     <div>
       <p>Already have an account? <a href="login.html">Login</a></p>
       <p>Or continue with</p>
-      <a href="https://www.google.com" class="google-btn">
+      <a href="https://accounts.google.com" class="google-btn">
         <button type="button">
           <img src="images/google-logo.jpg" alt="google-logo" />
           <p>Sign up with google</p>
