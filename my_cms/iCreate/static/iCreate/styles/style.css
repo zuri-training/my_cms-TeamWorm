@@ -36,9 +36,14 @@ main {
     height: 2000px;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     font-size: 3em;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2.6em;
 }
 
 footer {
