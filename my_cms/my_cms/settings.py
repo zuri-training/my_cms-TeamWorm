@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'accounts',
     'templates',
     'iCreate',
@@ -123,6 +124,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     "../frontend",
 ]
+AUTH_USER_MODEL = 'accounts.UserProfile'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
