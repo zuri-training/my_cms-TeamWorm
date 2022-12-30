@@ -1,0 +1,227 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/script.js"></script> -->
+    <link rel="stylesheet" href="{% static './styles/style.css' %}">
+    <link rel="stylesheet" href="{% static './styles/form.css' %}">
+    <link rel="stylesheet" href="{% static './scripts/script.js' %}">
+    <link rel="stylesheet" href="{% static './scripts/form.js' %}">
+    <title>iCreate - Landing Page</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav">
+                <a href="index.html" title="home"><img src="{% static 'images/icreate-logo.png' %}" alt="logo"></a>
+                <ul id="mid" >
+                    <li class="x-hidden"><a href="">Home</a></li>
+                    <li class="x-hidden"><a href=""> About us</a></li>
+                    <li class="x-hidden"><a href="">Contact us</a></li>
+                </ul>
+                {% if request.user.is_authenticated %}
+                <ul>
+                    <li class="x-hidden"><a href="{% url 'account:login' %}" title="login">Logout</a></li>
+                    <li class="x-hidden"><a href="{% url 'account:login' %}" title="sign up">Dashboard</a></li>
+                </ul>
+                {% else %}
+                <ul>
+                    <li class="x-hidden"><a href="{% url 'account:login' %}" title="login">Login</a></li>
+                    <li class="x-hidden"><a href="{% url 'account:register' %}" title="sign up">Sign up</a></li>
+                    <li class="y-hidden"><img id="nav-btn" src="{% static 'images/menu.png' %}" alt="show menu"></li>
+                </ul>
+            </div>
+            <ul class="menu-block">
+                <li><a href="">Home</a></li>
+                <li><a href=""> About us</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="{% url 'account:login' %}" title="login">Login</a></li>
+                <li><a href="{% url 'account:register' %}" title="sign up">Sign up</a></li>
+            </ul>
+            {% endif %}
+        </nav>
+    </header>
+    <main id="landing-page">
+        <section class="sect-1">
+            <div>
+                <h2>CREATE YOUR OWN WEBSITE</h2>
+                <p>Icreate is dedicated to helping you reach your goals with a high-performing website, the easy way
+                    with zero coding.
+                </p>
+                <p>Icreate has everything you need to create a unique,
+                    beautiful and modern website that will help you stand out and achieve your goals.
+                </p>
+                <button class="blue btn">Create a website</button>
+            </div>
+            <div class="container">
+                <div>
+                    <p>Fully compatible with mobile devices</p>
+                    <img src="{% static 'images/Group 5.png' %}" alt="mobile">
+                    <p>Create responsive websites that work well on all devices.</p>
+                </div>
+                <div>
+                    <p>Powerful marketing and SEO features</p>
+                    <img src="{% static 'images/Group 8.png' %}" alt="seo">
+                    <p>Everything you need to promote your business on search engines and social networks..</p>
+                </div>
+                <div>
+                    <p>No technical skills required</p>
+                    <img src="{% static 'images/Group 12.png' %}" alt="marketing">
+                    <p>We take care of all technical details, including domain registration and web hosting.</p>
+                </div>
+                <div>
+                    <p>Create multilingual websites</p>
+                    <img src="{% static 'images/Group 10.png' %}" alt="website">
+                    <p>Attract more customers by offering content in multiple languages.</p>
+                </div>
+            </div>
+        </section>
+        <section class="sect-2">
+            <div>
+                <img src="{% static 'images/fash-guy.png' %}" alt="">
+            </div>
+            <div class="container">
+                <h2>CREATE AN ONLINE STORE</h2>
+                <p>Start selling online today</p>
+                <p>Easily create a powerful online store with shopping cart, payment processing and many essential
+                    features that will help you sell more.</p>
+                <div class="flex0">
+                    <button class="blue btn">Start creating</button>
+                    <button class="white btn">More info</button>
+                </div>
+            </div>
+        </section>
+        <section class="sect-3">
+            <div>
+                <img src="{% static 'images/mobile app 1.png' %}" alt="">
+                <img src="{% static 'images/music template 1.png' %}" alt="">
+                <img src="{% static 'images/jumia-nigeria-website 1.png' %}" alt="">
+                <img src="{% static 'images/clock template 1.png' %}" alt="">
+            </div>
+            <div class="container">
+                <h2>BEAUTIFUL, PROFESSIONAL DESIGNS</h2>
+                <p>Outline your unique identity. Make an impression!</p>
+                <p>Create your own unique, professional-looking design by choosing your style, your colours, your
+                    pictures, fonts and layout.</p>
+                <div class="flex0">
+                    <button class="blue btn">Start creating</button>
+                    <button class="white btn">More info</button>
+                </div>
+            </div>
+        </section>
+        <section class="sect-4">
+            <div>
+                <img src="{% static 'images/happy customers 1.png' %}" alt="man using a laptop">
+                <div>
+                    <h2>HAPPY CUSTOMERS</h2>
+                    <p>A place where success stories are born</p>
+                    <p>Our customers include successful entrepreneurs, bloggers and activists from all walks of life.
+                        Join and start writing your success story today.
+                    </p>
+                    <button class="blue btn">Join now</button>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h2>NO TECHNICAL SKILLS REQUIRED
+                    </h2>
+                    <p>Easy and worry free</p>
+                    <p>We take care of all complex technical details, such as domain registration and web hosting, so
+                        that
+                        you can focus on things that are important to you.
+                    </p>
+                    <button class="white btn">Get started for free</button>
+                </div>
+                <div>
+                    <img src="{% static 'images/happy customer 2.png' %}" alt="lady on glasses" style="max-width: 420px;">
+                    <p>Diana, Kids fashion designer</p>
+                    <p>Icreate has helped me grow my business and online sales.
+                        I am extremely satisfied with how Icreate works.
+                        That's why I have been a happy customer for years</p>
+                </div>
+            </div>
+            <img src="{% static 'images/Group 82.png' %}" alt="3-dots">
+        </section>
+        <section class="sect-5">
+            <div>
+                <div>
+                    <div><img src="{% static 'images/laptop.png' %}" alt="laptop"></div>
+                    <div>
+                        <h2>RESPONSIVE CUSTOMER SUPPORT</h2>
+                        <p>Customer service that is ready to help you succeed</p>
+                        <p>Our customer service is ready to go into detail and find a solution so that you can reach
+                            your goals.</p>
+                        <div class="flex0">
+                            <button class="blue btn">Sign up</button>
+                            <button class="white btn">Get help</button>
+                        </div>
+                    </div>
+                </div>
+                <p>Want to stay upto date with our community inspirations and template updates, sign up for our
+                    newsletter today.</p>
+                <form action="#">
+                    <input type="email" placeholder="Enter email address">
+                    <button type="submit">Sign up</button>
+                </form>
+            </div>
+
+        </section>
+        <footer>
+            <ul id="footer-items">
+                <li>Product
+                    <ul>
+                        <li>Home</li>
+                        <li>E-commerce</li>
+                        <li>Examples</li>
+                        <li>Plans</li>
+                        <li>Affiliate Program</li>
+                        <li>Reseller</li>
+                    </ul>
+                </li>
+                <li>Company
+                    <ul>
+                        <li>Blog</li>
+                        <li>About</li>
+                        <li>Thanks</li>
+                    </ul>
+                </li>
+                <li>Legal
+                    <ul>
+                        <li>Private policy</li>
+                        <li>Terms of service</li>
+                    </ul>
+                </li>
+                <li>Support
+                    <ul>
+                        <li>Getting started guide</li>
+                        <li>Developers</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="social">
+                <select name="lang" id="lang">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                    <option value="du">German</option>
+                </select>
+                <div>
+                    <a href="https://www.youtube.com"><img src="{% static 'images/youtube icon.png' %}" alt="youtube"></a>
+                    <a href="https://www.facebook.com"><img src="{% static 'images/facebook logo.png' %}" alt="facebook"></a>
+                    <a href="https://www.linkedin.com"><img src="{% static 'images/linkedin logo.png' %}" alt="linkedin"></a>
+                    <a href="https://www.twitter.com"><img src="{% static 'images/blue twitter icon.png' %}" alt="twitter"></a>
+                    <a href="https://www.instagram.com"><img src="{% static 'images/instagram logo.png' %}" alt="instagram"></a>
+                </div>
+            </div>
+            <hr>
+            <p>Copyright &#169; Zuri Teamworm 2022</p>
+        </footer>
+    </main>
+
+</body>

@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up</title>
+  <!-- <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/form.css" /> -->
+  <link rel="stylesheet" href="{% static './styles/style.css' %}">
+  <link rel="stylesheet" href="{% static './styles/form.css' %}">
+  <link rel="stylesheet" href="{% static './scripts/script.js' %}">
+  <link rel="stylesheet" href="{% static './scripts/form.js' %}">
+  <!-- <script defer src="scripts/script.js"></script>
+  <script defer src="scripts/form.js"></script> -->
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav">
+        <a href="index.html" title="home"><img src="{% static 'images/icreate-logo.png' %}" alt="logo"></a>
+          <ul id="mid" >
+              <li class="x-hidden"><a href="">Home</a></li>
+              <li class="x-hidden"><a href=""> About us</a></li>
+              <li class="x-hidden"><a href="">Contact us</a></li>
+          </ul>
+          <ul>
+              <li class="x-hidden"><a href="login.html" title="login">Login</a></li>
+              <li class="x-hidden"><a href="register.html" title="sign up">Sign up</a></li>
+              <li class="y-hidden"><img id="nav-btn" src="images/menu.png" alt="show menu"></li>
+          </ul>
+      </div>
+      <ul class="menu-block">
+          <li><a href="">Home</a></li>
+          <li><a href=""> About us</a></li>
+          <li><a href="">Contact us</a></li>
+          <li><a href="login.html" title="login">Login</a></li>
+          <li><a href="register.html" title="sign up">Sign up</a></li>
+      </ul>
+  </nav>
+  </header>
+
+  <h1>Sign up</h1>
+  <div class="form-frame">
+    <form action="#" method="post">{% csrf_token %}
+      <ul>
+        <!-- <li>
+          <label for="firstname">First name</label>
+          <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required />
+        </li>
+        <li>
+          <label for="lastname">Last name</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" />
+        </li> -->
+        <li>
+          <label for="lastname">Last name</label>
+          <input type="text" id="lastname" name="username" placeholder="Enter your username name" />
+        </li>
+        <li>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </li>
+        <li>
+          <label for="password">Password</label>
+          <!-- <input type="password" id="password" name="password1" placeholder="Enter a unique password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}"
+            title="Password must contain at least one number, one upper case and lower case letter, and have a length of 8 to 12"
+            autocomplete="off" required /> -->
+            <input type="password" id="password" name="password1" placeholder="Enter a unique password"/>
+        </li>
+        <li>
+          <label for="confirm">Confirm password</label>
+          <!-- <input type="password" id="confirm" name="password2" placeholder="Confirm your unique password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}"
+            title="Password must contain at least one number, one upper case and lower case letter, and have a length of 8 to 12"
+            autocomplete="off" required /> -->
+            <input type="password" id="confirm" name="password2" placeholder="Confirm your unique password"/>
+        </li>
+
+        <!-- {% for field in registration_form %}
+				<p>
+				{% for error in field.errors %}
+				<p style="color: red">{{ error }}</p>
+				{% endfor %}
+				</p>
+				{% endfor %}
+				{% if registration_form.non_field_errors %}
+				<div style="color: red">
+					<p>{{registration_form.non_field_errors}}</p>
+				</div>
+
+				{% endif %} -->
+
+
+        <li>
+          <button type="submit">Sign up</button>
+        </li>
+      </ul>
+    </form>
+    <div>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+      <p>Or continue with</p>
+      <a href="https://accounts.google.com" class="google-btn">
+        <button type="button">
+          <!-- <img src="images/google-logo.jpg" alt="google-logo" /> -->
+          <img src="{% static 'images/google-logo.jpg' %}" alt="google-logo" />
+          <p>Sign up with google</p>
+        </button>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>
